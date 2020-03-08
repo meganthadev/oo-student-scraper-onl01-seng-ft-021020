@@ -8,11 +8,12 @@ class Scraper
     html = open(index_url)
     doc = Nokogiri::HTML (open("https://learn-co-curriculum.github.io/student-scraper-test-page/"))
     student_cards = doc.css(".student-card a")
-    
   end
 
   def self.scrape_profile_page(profile_url)
-   profile_url = doc.css(".student-card a").text 
+    html = open(profile_url)
+    doc = Nokogiri::HTML(html)
+    return_hash = {}
   end
 
 end
